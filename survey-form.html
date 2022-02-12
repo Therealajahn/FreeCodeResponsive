@@ -1,0 +1,159 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <style>
+     
+body{
+  margin:0;
+  margin-left: 10px;
+  margin-top: 20px;
+  padding:0;
+}
+
+form{
+  display: grid;
+}
+
+input{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+input[type=number]{
+  width: 3.5vw;
+}
+
+select{
+  margin-bottom: 10px;
+}
+
+option{
+  width: 20vw;
+}
+
+div{
+  display: grid;
+}
+
+div > *{
+  margin-top: 1vh;
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+}
+
+div:nth-child(1){
+  margin-top: 2vh;
+}
+
+textarea{
+  width: 30vw;
+  margin-bottom: 2vh;
+}
+
+button{
+  max-width: 100px;
+}
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Are You Truly Free?</h1>
+<p id="description">Do you actually have free will?</p>
+<form id="survey-form">
+  
+  <label for="name" id="name-label">
+    Name
+    <input type="text" id="name"  
+           placeholder="enter your name" required>
+  </label>
+  <label for="email" id="email-label">
+    Email
+    <input type="email" id="email" 
+           placeholder="enter your email" required>
+  </label>
+  <label for="number" id="number-label">
+    How many choices have you made today?
+    <input type="number" id="number" 
+          placeholder="number" min=0 max=10 required>
+  </label>
+  
+  <label for="dropdown" id="dropdown-label">
+    Are you alive?
+    <select id="dropdown">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="somewhat">Somewhat</option>
+    </select>
+  </label> 
+  <div id="breathe-radio">
+    Do you choose to breathe? OR are you a slave to your animal instincts to survive?
+    <label 
+           for="uncertainty" 
+           id="uncertainty">
+      Uh, I don't know...
+      <input 
+             type="radio" 
+             id="uncertainty-radio" 
+             name="breathe"
+             value="i-dont-know"
+             />
+    </label>
+    
+    <label 
+           for="aggressive-uncertainty" 
+           id="aggressive-uncertainty"
+           >
+      What are you talking about?
+      <input 
+             type="radio" 
+             id="agressive-uncertainty-radio"                            name="breathe"
+             value="what-are-you-talking-about"
+             />
+    </label>
+    
+    <label for="creeped-out" id="creeped-out-label">
+      Could you step back a bit...?
+      <input type="radio" 
+             id="creeped-out-radio" 
+             name="breathe"
+             value="step-back"
+             />
+    </label>
+      
+  </div>
+  
+  <div id="why-uncomfortable">
+    WHY does this subject make you so uncomfortable?
+    <label for="subconscious" id="subconscious-label">
+      I like to hide uncomfortable truths (such as that I have no free will) in my subconscious.
+      <input type="checkbox" 
+             id="subconscious" 
+             name="subconscious" 
+             value="subconscious"/>
+    </label>
+    <label for="ashamed" id="ashamed-label">
+      I dont want anyone to know I dont have free will.
+      <input type="checkbox" 
+             id="ashamed" 
+             name="ashamed" 
+             value="ashamed"/>
+    </label>
+    <label for="upsetting" id="upsetting-label">
+      I find the idea that I have no free will upsetting.
+      <input type="checkbox" 
+             id="upsetting" 
+             name="upsetting" 
+             value="upsetting"/>
+    </label>
+  </div>  
+  <p>Please take the time to reflect in text about your feelings below, now that you are temporalily relieved of your delusions of agency:
+  </p> 
+  <textarea rows="5" cols="20"></textarea>
+  <button type="submit" id="submit">Submit</button>
+  
+</form>
+  </body>
+</html>
